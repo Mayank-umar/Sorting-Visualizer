@@ -27,6 +27,7 @@ select{
     border: 2px solid white;
     border-radius: 50px;
     color: white;
+    padding: 3px;
 }
 nav{
     display: flex;
@@ -88,4 +89,23 @@ h1{
     cursor:pointer;
     scale: 1.3;
     animation: ease-in-out;
+}
+@media(max-width:750px){
+    nav{
+        position: absolute;
+        bottom: 0;
+        min-width: 100vw;
+    }
+    .slider{
+        display: none;
+    }
+    .start-btn{
+        font-size: 6vw;
+    }
+    .reset-btn{
+        font-size: 6vw;
+    }
+    select{
+        width: 50%;
+    }
 }
