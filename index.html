@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header>
+    <h1>Sorting Visualizer</h1>
+</header>
+    <nav>
+        <h1 class="start-btn">
+            <i class="fa-regular fa-circle-play" onclick="start()" font-size=""20px></i>
+        </h1>
+        <h1 class="reset-btn">
+            <i class="fa-solid fa-arrow-rotate-right" onclick="reset()"></i>
+        </h1>
+            <select name="algorithm" id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="rQuick" selected>Randomized Quick Sort</option>
+                <option value="merge">Merge Sort</option>
+            </select>
+            <div class="slider">
+                Speed : <span id="speedChange">20</span>&nbsp;
+                <input type="range" name="speed" id="speed" min="2" max ='100' value="50" onchange="speedValue(this.value)">
+            </div>
+            <div class="slider">
+                Size : <span id="sizeChange">50</span>&nbsp;
+                <input type="range" name="size" id="size" min="10" max ='300' value="80" onchange="resize()">
+            </div>
+    </nav>
+    <main>
+        <div id="main-count"></div>
+    </main>
+</body>
+    <script src="js/sorting.js"></script>
+</html>
